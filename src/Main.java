@@ -49,7 +49,8 @@ public class Main {
 			// read data from csv
 			//File file = main.getFileFromResources("data.csv");
 			InputStream in = main.getClass().getClassLoader().getResourceAsStream("data.csv"); 
-			//FileReader fileReader = new FileReader(file);
+			//FileReader fileReader = new FileReader(file); // absolute path
+			// csvReader = new BufferedReader(fileReader);
 			csvReader = new BufferedReader(new InputStreamReader(in));
 			try {
 				while ((row = csvReader.readLine()) != null) {
